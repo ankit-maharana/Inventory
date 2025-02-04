@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Ankit Maharana
+- **Dot Number**: .6
+- **Due Date**: 2/4/25
 
 ## Assignment Overview
 
@@ -28,8 +28,6 @@ detailed feedback, which may help you decide which component to ultimately
 implement.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -106,11 +104,7 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I'm actually a prelaw student so I don't plan on pursuing a career in CS. I really enjoy it and its something that I tend to understand, but law has always been my passion.
 
 ## Assignment
 
@@ -200,68 +194,37 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Inventory
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A highly customizable system where you can add an element with a number of user-created "attributes" that are all categorized. Every element either has an attribute from a given category or is empty (NOT null). The name of an element is a category.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - String createElement(String name): Creates an attributeless element; returns an id
+    - void removeElement(String id): Removes an element
+    - void createCategory(String name, T x): Creates a category and assigns a type for the attribute acceptable to be stored for it; x will be the "empty" value
+    - void addAttribute(String id, T x): Edits the attribute of a given element; fills attribute with x
+    - T getAttribute(String id, String name): Return attribute of a element
+    - T returnTypeCategory(String name): Returns the data type acceptable in a category
+    - bool fillFromTxt(String name): Used initially to convert a txt file to a filled inventory; returns if success
+    - bool storeToTxt (String name): Used to edit txt file to store inventory changes; return if success
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - T getElement(String id): Returns the entire element
+    - Sequence<String> returnIDCategory(String name): Returns the IDs of elements with a non-empty element in the category
+    - Sequence<String> returnIDAttribute(String name, T x): Returns the IDs of elements with the attribute x in the given category
+    - void reset(): Clears the whole inventory
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Would likely extend standard, but also must be capable of change as that's the entire purpose
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Map.Pair to connect the ID to sequence of attributes
+      - Sequence to hold attributes
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
-
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
-
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - returnIDCategory would use getAttribute and check if they are non-empty values
 
 ## Post-Assignment
 
