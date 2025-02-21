@@ -1,6 +1,6 @@
 import components.map.Map;
 import components.map.Map.Pair;
-import components.map.MapSecondary.SimplePair;
+import components.map.MapSecondary;
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 import components.set.Set;
